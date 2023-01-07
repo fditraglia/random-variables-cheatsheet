@@ -7,6 +7,8 @@
 
 \begin{document}
 
+\pagestyle{empty}
+
 
 \begin{table}
 \onehalfspacing
@@ -90,11 +92,11 @@ Law of Total Variance & $\text{Var}(Y) = \mathbbm{E}\left[ \text{Var}(Y|X) \righ
 \begin{tabular}{l|l|l|l}
 &Sample Statistic & Population Parameter & Population Parameter\\
 \hline
-Setup & Sample from a population&  Population viewed as list of objects& Population viewed as a RV\\
+Setup & Sample of size $n < N$ from a popn.\ &  Population viewed as list of $N$ objects& Population viewed as a RV\\
 Mean &$\bar{x} = \displaystyle\frac{1}{n}\sum_{i=1}^n x_i$&$\displaystyle \mu_X = \frac{1}{N}\sum_{i=1}^N x_i$&Discrete $\;\;\; \displaystyle \mu_X = \sum_{x}xp(x)$\\
 &&&Continuous $\;\;\; \mu_X = \int_{-\infty}^\infty xf(x)\; dx$\\
 &&&\\
-Variance &$\displaystyle s_X^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2$&$\displaystyle \sigma_X^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu_X)^2$& $\sigma^2_X = E\left[\left(X - E[X]\right)^2 \right]$\\
+Variance &$\displaystyle s_X^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2$&$\displaystyle \sigma_X^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu_X)^2$& $\sigma^2_X = \mathbbm{E}\left[\left(X - \mathbbm{E}[X]\right)^2 \right]$\\
 &&&\\
 Std.\ Dev.\ &$s_X = \sqrt{s^2_X}$&$\sigma_X = \sqrt{\sigma^2_x}$&$\sigma_X = \sqrt{\sigma^2_x}$\\
 &&&\\
