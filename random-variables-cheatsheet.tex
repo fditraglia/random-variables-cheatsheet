@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{bbm}
+
+\begin{document}
+
+
+\begin{table}
+\onehalfspacing
+\centering
+	\begin{tabular}{l|ll}
+	\hline
+  & Discrete: pmf $p(\cdot)$ & Continuous: pdf $f(\cdot)$ \\
+	\hline
+	Support Set & Countable set of values & Uncountable set of values\\\\
+  Probabilities & $p(x) = P(X=x)$ &$f(x) \neq P(X=x)= 0$ for all $x$\\
+	&&$P(a\leq X \leq b) = \int_{a}^{b} f(x)dx=F(b) - F(a)$\\\\
+  Joint & $p_{XY}(x,y) = \mathbbm{P}(X=x,Y=y)$& $\mathbbm{P}(X\in [a,b],  Y\in [c,d]) = \int_{a}^b \int_{c}^d f_{XY}(x,y)\; dx \; dy$\\ \\
+  Marginal & $p_X(x) = \sum_{y} p_{XY}(x,y)$ & $f_X(x) = \int_{-\infty}^{\infty} f_{XY}(x,y) \, dy$\\ \\
+  Conditional  & $p_{X|Y}(x|y) = p_{XY}(x,y)/p_Y(y) $ & $f_{X|Y}(x|y) = f_{XY}(x,y)/f_Y(y)$ \\ \\
+	 Independence & $p_{XY}(x,y) = p_X(x)p_Y(y)$ & $f_{XY}(x,y) = f_X(x) f_Y(y)$\\\\
+	Expected Value & $\mu_X=\mathbbm{E}[X] =\sum_x xp(x)$ &$\mu_X=\mathbbm{E}[X] =\int_{-\infty}^{\infty} xf(x)\; dx$\\
+	& $\mathbbm{E}[g(X)] =\sum_x g(x)p(x)$ &$\mathbbm{E}[g(X)] =\int_{-\infty}^{\infty} g(x)f(x)\; dx$\\
+  & $\mathbbm{E}[g(X,Y)] =\sum_x \sum_y g(x,y)p(x,y)$ &$\mathbbm{E}[g(X,Y)] =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(x,y)f_{XY}(x,y)\; dx \; dy$\\
+	\hline
+	\end{tabular}
+	\caption{Differences between Discrete and Continous Random Variables}
+	
+\end{table}
+
+
+
+
+\begin{table}
+\onehalfspacing
+\centering
+\begin{tabular}{l|l}
+\hline
+Probability Mass Function $p(x)$& Probability Density Function $f(x)$\\
+	\hline
+	Discrete Random Variables & Continuous Random Variables\\
+	$p(x) = P(X=x)$& $f(x) \neq P(X=x)=0$\\
+	$p(x)\geq 0$ & $f(x)\geq 0$\\
+	$p(x) \leq 1$ & $f(x)$ \emph{can} be greater than one!\\
+	$\sum_{x}p(x) = 1$&$\int_{-\infty}^{\infty}f(x)\; dx = 1$\\
+	$F(x_0)= \sum_{x\leq x_0} p(x)$& $F(x) = \int_{-\infty}^{x} f(t)\; dt$\\
+	\hline
+\end{tabular}
+\caption{Probability mass function (pmf) versus probability density function.}
+\end{table}
+
+
+\begin{sidewaystable}
+\onehalfspacing
+\centering
+\begin{tabular}{l|l}
+\hline
+Definition of R.V.\ & $X\colon S \rightarrow \mathbbm{R}$ (RV is a fixed function from sample space to reals) \\
+Support Set& Collection of all possible realizations of an RV take\\
+CDF & $F(x_0) = P(X\leq x_0)$\\
+Standard Deviation&$\sigma_X = \sqrt{\sigma_X^2}$\\
+Cov.\ and Independence&$X,Y$ independent  $\Rightarrow \text{Cov}(X,Y) = 0$ but $\text{Cov}(X,Y)=0 \nRightarrow X,Y$ independent\\
+	Functions and Independence& $X,Y$ independent $\Rightarrow g(X), h(Y)$ independent \\
+  Definition of Correlation & $\rho_{XY} = \text{Corr}(X,Y) = \sigma_{XY}/(\sigma_X \sigma_Y)$ \\
+  Expectation of a Function& In general, $\mathbbm{E}[g(X)] \neq g\left( \mathbbm{E}[X]\right)$\\
+Linearity of Expectation & $\mathbbm{E}[a + X] = a + \mathbbm{E}[X]$\\
+& $\mathbbm{E}[bX] =  b \mathbbm{E}[X]$\\
+& $\mathbbm{E}[X_1 + \hdots + X_k] = \mathbbm{E}[X_1] + \hdots \mathbbm{E}[X_k]$\\ 
+Variance &$\sigma_X^2 \equiv \text{Var}(X) \equiv \mathbbm{E}\left[\left(X - \mathbbm{E}[X]\right)^2 \right] = \mathbbm{E}[X^2] - \left(\mathbbm{E}[X]\right)^2 = \mathbbm{E}\left[ X(X - \mu_X) \right]$\\
+Var.\ of Linear Combination & $\text{Var}(a + X) = \text{Var}(X)$\\
+&  $\text{Var}(bX) = b^2 \text{Var}(X)$\\
+&$\text{Var}(aX + bY + c) = a^2 \text{Var}(X) + b^2 \text{Var}(Y) + 2ab \text{Cov}(X,Y)$\\ 
+& $X_1, \dots, X_k$ are uncorrelated $\Rightarrow \text{Var}(X_1 + \hdots + X_k) = \text{Var}(X_1) + \hdots \text{Var}(X_k)$ \\
+Covariance&$\sigma_{XY} \equiv \text{Cov}(X,Y) \equiv \mathbbm{E}\left[\left(X - \mathbbm{E}[X]\right)\left(Y - \mathbbm{E}[Y]\right)\right] = \mathbbm{E}[XY] - \mathbbm{E}[X]\mathbbm{E}[Y] = \mathbbm{E}\left[ X(Y - \mu_Y) \right] = \mathbbm{E}\left[ (X - \mu_X)Y \right]$\\
+Bilinearity of Covariance &  $\text{Cov}(a + X, Y) = \text{Cov}(X, a + Y) = \text{Cov}(X,Y)$\\
+& $\text{Cov}(bX, Y) = \text{Cov}(X, bY) = b \text{Cov}(X,Y)$ \\
+& $\text{Cov}(X, Y + Z) = \text{Cov}(X,Y) + \text{Cov}(X, Z)$ and $\text{Cov}(X + Z, Y) = \text{Cov}(X,Y) + \text{Cov}(Z,Y)$ \\
+%& $\text{Cov}(a + bX , c + d Y) = \text{Cov}(b X, dY) = bd \text{Cov}(X,Y)$\\
+\hline
+\end{tabular}
+\caption{Essential facts that hold for \emph{all} random variables, continuous or discrete: $X, Y, Z$ and $X_1, \dots, X_k$ are random variables; $a, b, c, d$ are constants; $\mu, \sigma, \rho$ are parameters; and $g(\cdot)$, $h(\cdot)$ are functions.}
+\end{sidewaystable}
+
+
+\begin{sidewaystable}
+\centering
+\begin{tabular}{l|l|l|l}
+&Sample Statistic & Population Parameter & Population Parameter\\
+\hline
+Setup & Sample from a population&  Population viewed as list of objects& Population viewed as a RV\\
+Mean &$\bar{x} = \displaystyle\frac{1}{n}\sum_{i=1}^n x_i$&$\displaystyle \mu_X = \frac{1}{N}\sum_{i=1}^N x_i$&Discrete $\;\;\; \displaystyle \mu_X = \sum_{x}xp(x)$\\
+&&&Continuous $\;\;\; \mu_X = \int_{-\infty}^\infty xf(x)\; dx$\\
+&&&\\
+Variance &$\displaystyle s_X^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2$&$\displaystyle \sigma_X^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu_X)^2$& $\sigma^2_X = E\left[\left(X - E[X]\right)^2 \right]$\\
+&&&\\
+Std.\ Dev.\ &$s_X = \sqrt{s^2_X}$&$\sigma_X = \sqrt{\sigma^2_x}$&$\sigma_X = \sqrt{\sigma^2_x}$\\
+&&&\\
+Covariance &$\displaystyle s_{XY} = \frac{1}{n-1} \sum_{i=1}^n (x_i -\bar{x})(y_i - \bar{y})$&$\sigma_{XY} = \displaystyle \frac{1}{N} \sum_{i=1}^N (x_i -\mu_X)(y_i - \mu_Y)$&$\sigma_{XY} = E\left[ \left(X - \mu_X \right) \left(Y - \mu_Y \right)  \right]$ \\
+&&&\\
+Correlation &$r_{XY} = s_{XY}/(s_X s_Y)$&$\rho_{XY} = \sigma_{XY}/(\sigma_X \sigma_Y)$& $\rho_{XY} = \sigma_{XY}/(\sigma_X \sigma_Y)$\\
+\hline
+\end{tabular}
+
+\end{sidewaystable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
