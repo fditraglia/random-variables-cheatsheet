@@ -59,26 +59,26 @@ Probability Mass Function $p(x)$& Probability Density Function $f(x)$\\
 \begin{tabular}{l|l}
 \hline
 Definition of R.V.\ & $X\colon S \rightarrow \mathbbm{R}$ (RV is a fixed function from sample space to reals) \\
-Support Set& Collection of all possible realizations of an RV take\\
+Support Set& Collection of all possible realizations of a RV\\
 CDF & $F(x_0) = P(X\leq x_0)$\\
-Standard Deviation&$\sigma_X = \sqrt{\sigma_X^2}$\\
-Cov.\ and Independence&$X,Y$ independent  $\Rightarrow \text{Cov}(X,Y) = 0$ but $\text{Cov}(X,Y)=0 \nRightarrow X,Y$ independent\\
-	Functions and Independence& $X,Y$ independent $\Rightarrow g(X), h(Y)$ independent \\
-  Definition of Correlation & $\rho_{XY} = \text{Corr}(X,Y) = \sigma_{XY}/(\sigma_X \sigma_Y)$ \\
-  Expectation of a Function& In general, $\mathbbm{E}[g(X)] \neq g\left( \mathbbm{E}[X]\right)$\\
-Linearity of Expectation & $\mathbbm{E}[a + X] = a + \mathbbm{E}[X]$\\
-& $\mathbbm{E}[bX] =  b \mathbbm{E}[X]$\\
-& $\mathbbm{E}[X_1 + \hdots + X_k] = \mathbbm{E}[X_1] + \hdots \mathbbm{E}[X_k]$\\ 
+Expectation of a Function& In general, $\mathbbm{E}[g(X)] \neq g\left( \mathbbm{E}[X]\right)$\\
+Linearity of Expectation & $\mathbbm{E}[a + X] = a + \mathbbm{E}[X], \quad \mathbbm{E}[bX] =  b \mathbbm{E}[X], \quad \mathbbm{E}[X_1 + \hdots + X_k] = \mathbbm{E}[X_1] + \hdots \mathbbm{E}[X_k]$\\ 
 Variance &$\sigma_X^2 \equiv \text{Var}(X) \equiv \mathbbm{E}\left[\left(X - \mathbbm{E}[X]\right)^2 \right] = \mathbbm{E}[X^2] - \left(\mathbbm{E}[X]\right)^2 = \mathbbm{E}\left[ X(X - \mu_X) \right]$\\
-Var.\ of Linear Combination & $\text{Var}(a + X) = \text{Var}(X)$\\
-&  $\text{Var}(bX) = b^2 \text{Var}(X)$\\
-&$\text{Var}(aX + bY + c) = a^2 \text{Var}(X) + b^2 \text{Var}(Y) + 2ab \text{Cov}(X,Y)$\\ 
+Standard Deviation&$\sigma_X = \sqrt{\sigma_X^2}$\\
+Var.\ of Linear Combination & $\text{Var}(a + X) = \text{Var}(X), \quad \text{Var}(bX) = b^2 \text{Var}(X), \quad \text{Var}(aX + bY + c) = a^2 \text{Var}(X) + b^2 \text{Var}(Y) + 2ab \text{Cov}(X,Y)$\\ 
 & $X_1, \dots, X_k$ are uncorrelated $\Rightarrow \text{Var}(X_1 + \hdots + X_k) = \text{Var}(X_1) + \hdots \text{Var}(X_k)$ \\
 Covariance&$\sigma_{XY} \equiv \text{Cov}(X,Y) \equiv \mathbbm{E}\left[\left(X - \mathbbm{E}[X]\right)\left(Y - \mathbbm{E}[Y]\right)\right] = \mathbbm{E}[XY] - \mathbbm{E}[X]\mathbbm{E}[Y] = \mathbbm{E}\left[ X(Y - \mu_Y) \right] = \mathbbm{E}\left[ (X - \mu_X)Y \right]$\\
-Bilinearity of Covariance &  $\text{Cov}(a + X, Y) = \text{Cov}(X, a + Y) = \text{Cov}(X,Y)$\\
-& $\text{Cov}(bX, Y) = \text{Cov}(X, bY) = b \text{Cov}(X,Y)$ \\
+Correlation & $\rho_{XY} = \text{Corr}(X,Y) = \sigma_{XY}/(\sigma_X \sigma_Y)$ \\
+Covariance and Independence&$X,Y$ independent  $\Rightarrow \text{Cov}(X,Y) = 0$ but $\text{Cov}(X,Y)=0 \nRightarrow X,Y$ independent\\
+	Functions and Independence& $X,Y$ independent $\Rightarrow g(X), h(Y)$ independent \\
+Bilinearity of Covariance &  $\text{Cov}(a + X, Y) = \text{Cov}(X, a + Y) = \text{Cov}(X,Y), \quad \text{Cov}(bX, Y) = \text{Cov}(X, bY) = b \text{Cov}(X,Y)$ \\
 & $\text{Cov}(X, Y + Z) = \text{Cov}(X,Y) + \text{Cov}(X, Z)$ and $\text{Cov}(X + Z, Y) = \text{Cov}(X,Y) + \text{Cov}(Z,Y)$ \\
 %& $\text{Cov}(a + bX , c + d Y) = \text{Cov}(b X, dY) = bd \text{Cov}(X,Y)$\\
+Linearity of Conditional $\mathbbm{E}$ & $\mathbbm{E}[a + Y|X] = a + \mathbb{E}[Y|X], \quad \mathbbm{E}[b Y|X] = b \mathbbm{E}[Y|X], \quad \mathbbm{E}[X_1 + \dots + X_k|Z] = \mathbbm{E}[X_1|Z] + \dots + \mathbbm{E}[X_k|Z]$ \\ 
+Taking Out What is Known & $\mathbbm{E}[g(X) Y|X] = g(X)\mathbbm{E}[Y|X]$\\
+Law of Iterated Expectations & $\mathbbm{E}[Y] = \mathbbm{E}\left[ \mathbbm{E}(Y|X) \right]$\\
+Conditional Variance & $\text{Var}(Y|X) \equiv \mathbbm{E}\left\{ \left( Y - \mathbbm{E}[Y|X] \right)^2 \right\} = \mathbbm{E}[Y^2|X] - \left( \mathbbm{E}[Y|X] \right)^2$ \\
+Law of Total Variance & $\text{Var}(Y) = \mathbbm{E}\left[ \text{Var}(Y|X) \right] + \text{Var}\left( \mathbbm{E}[Y|Z] \right)$\\
 \hline
 \end{tabular}
 \caption{Essential facts that hold for \emph{all} random variables, continuous or discrete: $X, Y, Z$ and $X_1, \dots, X_k$ are random variables; $a, b, c, d$ are constants; $\mu, \sigma, \rho$ are parameters; and $g(\cdot)$, $h(\cdot)$ are functions.}
