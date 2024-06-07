@@ -79,8 +79,8 @@ Bilinearity of Covariance &  $\text{Cov}(a + X, Y) = \text{Cov}(X, a + Y) = \tex
 Linearity of Conditional $\mathbbm{E}$ & $\mathbbm{E}[a + Y|X] = a + \mathbb{E}[Y|X], \quad \mathbbm{E}[b Y|X] = b \mathbbm{E}[Y|X], \quad \mathbbm{E}[X_1 + \dots + X_k|Z] = \mathbbm{E}[X_1|Z] + \dots + \mathbbm{E}[X_k|Z]$ \\ 
 Taking Out What is Known & $\mathbbm{E}[g(X) Y|X] = g(X)\mathbbm{E}[Y|X]$\\
 Law of Iterated Expectations & $\mathbbm{E}[Y] = \mathbbm{E}\left[ \mathbbm{E}(Y|X) \right]$\\
-Conditional Variance & $\text{Var}(Y|X) \equiv \mathbbm{E}\left\{ \left( Y - \mathbbm{E}[Y|X] \right)^2 \right\} = \mathbbm{E}[Y^2|X] - \left( \mathbbm{E}[Y|X] \right)^2$ \\
-Law of Total Variance & $\text{Var}(Y) = \mathbbm{E}\left[ \text{Var}(Y|X) \right] + \text{Var}\left( \mathbbm{E}[Y|Z] \right)$\\
+Conditional Variance & $\text{Var}(Y|X) \equiv \mathbbm{E}\left\{\left. \left( Y - \mathbbm{E}[Y|X] \right)^2 \right| X \right\} = \mathbbm{E}[Y^2|X] - \left( \mathbbm{E}[Y|X] \right)^2$ \\
+Law of Total Variance & $\text{Var}(Y) = \mathbbm{E}\left[ \text{Var}(Y|X) \right] + \text{Var}\left( \mathbbm{E}[Y|X] \right)$\\
 \hline
 \end{tabular}
 \caption{Essential facts that hold for \emph{all} random variables, continuous or discrete: $X, Y, Z$ and $X_1, \dots, X_k$ are random variables; $a, b, c, d$ are constants; $\mu, \sigma, \rho$ are parameters; and $g(\cdot)$, $h(\cdot)$ are functions.}
